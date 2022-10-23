@@ -17,7 +17,8 @@ function App() {
         </main>
       </header>
       <footer className="App-footer ">
-        <small>Coded by TS</small>
+        <small> 
+         <a href="https://github.com/Tatyana787/dictionary"> Open-source code </a> by Tanya Stadnyk</small>
       </footer>
     </div>
   );
