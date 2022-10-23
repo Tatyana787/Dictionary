@@ -2,7 +2,7 @@ import "./App.css";
 import Dictionary from "./Dictionary";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
+
 
 function App() {
   return (
@@ -10,9 +10,7 @@ function App() {
       <header className="App-header">
         <div className="container">
           {" "}
-          <Button type="button" class=" btn btn-danger">
-            Danger
-          </Button>
+          <h1 className="text-center"> DICTIONARY </h1>
         </div>
         <main>
           <Dictionary />
