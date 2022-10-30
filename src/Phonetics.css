@@ -1,0 +1,13 @@
+.Phonetics{
+    height: 50px;
+}
+.Phonetics a {
+    text-decoration: none;
+    border: solid 1px #ddd;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-right: 10px;
+
+
+
+}

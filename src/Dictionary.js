@@ -10,13 +10,12 @@ export default function Dictionary() {
   let [result, setResult] = useState(null);
 
   function handleResponse(respons) {
-    // console.log(respons.data[0]);
     setResult(respons.data[0]);
+    console.log(respons.data[0])
   }
 
   function search(event) {
     event.preventDefault();
-    console.log("123");
   
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
@@ -26,6 +25,7 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
   return (
+    <div className="Dictionary-header">
     <div className="Dictionary px-4">
       <Form onSubmit={search} className="">
         <InputGroup onSubmit={search}>
@@ -46,8 +46,10 @@ export default function Dictionary() {
           </Button>
         </InputGroup>
       </Form>
+    
       <div className="mt-4">
         <Result description={result} />
+      </div>
       </div>
     </div>
   );
