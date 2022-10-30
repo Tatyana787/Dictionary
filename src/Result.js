@@ -5,29 +5,28 @@ export default function Result(props) {
   if (props.description) {
     return (
       <div className="Result">
-           <section> 
-       
-        <h1 className="text-info">{props.description.word} </h1>
-     
-        {props.description.phonetics.map(function (phonetics, index) {
-          return (
-          
-            <div key={index}>
-              <Phonetics allPhonetics={phonetics} />
-            </div>   
-          );
-        })}
-        </section>
+        <section>
+          <h1 className="text-info">{props.description.word} </h1>
+
+          {props.description.phonetics.map(function (phonetic, index) {
+            return (
+            
+                <Phonetics allPhonetics={phonetic} key={index}/>
+           
+            );
+          })}
+             </section>
         {props.description.meanings.map(function (meaning, index) {
           return (
-            <section>
-            <div key={index}>
-              {" "}
-              <Meaning allMeanings={meaning} />
-            </div>
+            <section key={index}>
+        
+             
+                <Meaning allMeanings={meaning} />
+        
             </section>
           );
         })}
+   
       </div>
     );
   } else {
